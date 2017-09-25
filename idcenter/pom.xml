@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>idcenter</artifactId>
-
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>com.iag.bbscloud</groupId>
@@ -40,4 +40,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.iag.bbscloud.idcenter.IdCenterApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

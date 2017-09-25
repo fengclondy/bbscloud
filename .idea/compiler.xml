@@ -24,7 +24,7 @@
       <module name="article" target="1.8" />
       <module name="bank" target="1.8" />
       <module name="bbscloud" target="1.8" />
-      <module name="common" target="1.8" />
+      <module name="common" target="1.5" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="eurekaserver" target="1.5" />

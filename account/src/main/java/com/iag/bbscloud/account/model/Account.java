@@ -3,10 +3,10 @@ package com.iag.bbscloud.account.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GeneratorType;
+import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -20,8 +20,10 @@ import java.util.Date;
 public class Account {
 
     @Id
+    @GeneratedValue(generator = "ass")
+    @GenericGenerator(name = "ass", strategy = "assigned")
     @Column(nullable = false, unique = true)
-    private Long                              uid;
+    private Long                                uid;
     @Column(nullable = false, unique = true)
     private String                              name;
     @Column

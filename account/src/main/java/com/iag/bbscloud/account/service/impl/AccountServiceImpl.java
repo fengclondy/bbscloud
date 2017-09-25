@@ -33,7 +33,7 @@ public class AccountServiceImpl implements AccountService {
 
         // 3.add account
         Date now = DateUtils.getNow();
-        Account newAccount = new Account(Long.getLong(uid),
+        Account newAccount = new Account(Long.valueOf(uid),
                 accountAddDTO.getName(),
                 accountAddDTO.getPassword(),
                 now, now);
