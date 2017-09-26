@@ -7,6 +7,7 @@ import org.hibernate.annotations.GeneratorType;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.math.BigInteger;
 import java.util.Date;
 
 /**
@@ -23,7 +24,7 @@ public class Account {
     @GeneratedValue(generator = "ass")
     @GenericGenerator(name = "ass", strategy = "assigned")
     @Column(nullable = false, unique = true)
-    private Long                                uid;
+    private BigInteger                          uid;
     @Column(nullable = false, unique = true)
     private String                              name;
     @Column

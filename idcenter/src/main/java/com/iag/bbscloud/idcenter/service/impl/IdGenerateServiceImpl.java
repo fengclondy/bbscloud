@@ -38,9 +38,9 @@ public class IdGenerateServiceImpl implements IdGenerateService {
 
         /**
          * 方案2
-         * fill(2bit) + idcenter(4it) + bizTag(4bit) + incid(10bit) = 20bit
+         * idcenter(4it) + bizTag(4bit) + incid(10bit) = 18bit
          */
-        String id = fill + idcenterNum + bizTagEnum.getName() + incid;
+        String id = idcenterNum + bizTagEnum.getName() + incid;
 
         return id;
     }

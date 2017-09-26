@@ -10,6 +10,7 @@ import com.iag.bbscloud.common.date.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 /**
@@ -33,7 +34,7 @@ public class AccountServiceImpl implements AccountService {
 
         // 3.add account
         Date now = DateUtils.getNow();
-        Account newAccount = new Account(Long.valueOf(uid),
+        Account newAccount = new Account(new BigInteger(uid, 10),
                 accountAddDTO.getName(),
                 accountAddDTO.getPassword(),
                 now, now);

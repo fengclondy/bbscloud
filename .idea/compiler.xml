@@ -13,6 +13,7 @@
         <module name="config-server" />
         <module name="eureka-server" />
         <module name="eurekaserver" />
+        <module name="getway" />
         <module name="honor" />
         <module name="idcenter" />
         <module name="reply" />
@@ -28,6 +29,7 @@
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="eurekaserver" target="1.5" />
+      <module name="getway" target="1.8" />
       <module name="honor" target="1.8" />
       <module name="idcenter" target="1.8" />
       <module name="reply" target="1.8" />

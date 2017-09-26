@@ -18,6 +18,7 @@
         <module>ribbon-server</module>
         <module>common</module>
         <module>idcenter</module>
+        <module>getway</module>
     </modules>
 
     <packaging>pom</packaging>

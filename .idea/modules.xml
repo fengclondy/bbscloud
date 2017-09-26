@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/getway/getway.iml" filepath="$PROJECT_DIR$/getway/getway.iml" />
       <module fileurl="file://$PROJECT_DIR$/honor/honor.iml" filepath="$PROJECT_DIR$/honor/honor.iml" />
       <module fileurl="file://$PROJECT_DIR$/idcenter/idcenter.iml" filepath="$PROJECT_DIR$/idcenter/idcenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/reply/reply.iml" filepath="$PROJECT_DIR$/reply/reply.iml" />
