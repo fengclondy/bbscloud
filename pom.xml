@@ -19,6 +19,7 @@
         <module>common</module>
         <module>idcenter</module>
         <module>getway</module>
+        <module>board</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -43,6 +44,11 @@
             <artifactId>lombok</artifactId>
             <version>1.16.18</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.6</version>
         </dependency>
     </dependencies>
 
