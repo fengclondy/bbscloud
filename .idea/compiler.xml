@@ -9,6 +9,7 @@
         <module name="account" />
         <module name="article" />
         <module name="bank" />
+        <module name="board" />
         <module name="common" />
         <module name="config-server" />
         <module name="eureka-server" />
@@ -25,6 +26,7 @@
       <module name="article" target="1.8" />
       <module name="bank" target="1.8" />
       <module name="bbscloud" target="1.8" />
+      <module name="board" target="1.8" />
       <module name="common" target="1.5" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
