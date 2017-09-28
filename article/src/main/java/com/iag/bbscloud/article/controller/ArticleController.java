@@ -31,4 +31,9 @@ public class ArticleController {
     public ArticleDTO addArticle(@RequestBody ArticleAddDTO articleAddDTO) throws BusinessException {
         return articleService.addArticle(articleAddDTO);
     }
+    
+    @DeleteMapping("/article/{aid}")
+    public void deleteArticle(@PathVariable BigInteger aid){
+        // TODO: 2017/9/28
+    }
 }
