@@ -3,6 +3,9 @@ package com.iag.bbscloud.article.service;
 import com.iag.bbscloud.common.dto.ArticleAddDTO;
 import com.iag.bbscloud.common.dto.ArticleDTO;
 import com.iag.bbscloud.common.exception.BusinessException;
+import com.iag.bbscloud.common.exception.ParameterException;
+
+import java.math.BigInteger;
 
 /**
  * @Author xueshan.wei@mljr.com
@@ -12,5 +15,6 @@ public interface ArticleService {
 
     ArticleDTO addArticle(ArticleAddDTO articleAddDTO) throws BusinessException;
 
+    ArticleDTO querySingleArticle(BigInteger aid) throws ParameterException;
 
 }
