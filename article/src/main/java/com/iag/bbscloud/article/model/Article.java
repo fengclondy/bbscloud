@@ -1,5 +1,6 @@
 package com.iag.bbscloud.article.model;
 
+import com.iag.bbscloud.common.date.DateUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,4 +34,14 @@ public class Article {
     private Date                            createTime;
     @Column
     private Date                            lastModifyTime;
+
+    public Article(BigInteger aid, BigInteger uid, BigInteger bid, String title) {
+        this.aid = aid;
+        this.uid = uid;
+        this.bid = bid;
+        this.title = title;
+        Date now = DateUtils.getNow();
+        this.createTime = now;
+        this.lastModifyTime = now;
+    }
 }

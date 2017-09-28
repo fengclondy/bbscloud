@@ -22,5 +22,6 @@ public class Label {
     @GeneratedValue
     @Column(nullable = false, unique = true)
     private Long                            lid;
+    @Column
     private String                          name;
 }
