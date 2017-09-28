@@ -23,7 +23,7 @@ public class IdGenerateService {
     }
 
     public String generateId(){
-        String idUrl = "http://IDCENTER-SERVER/id?bizTag=" + BizTagEnum.AID.getValue();
+        String idUrl = "http://IDCENTER-SERVER/id?bizTag=" + BizTagEnum.UID.getValue();
         return restTemplate.getForObject(idUrl, String.class);
     }
 }
