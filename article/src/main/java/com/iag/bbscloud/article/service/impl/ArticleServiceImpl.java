@@ -10,6 +10,7 @@ import com.iag.bbscloud.common.dto.ArticleDTO;
 import com.iag.bbscloud.common.enums.BizTagEnum;
 import com.iag.bbscloud.common.exception.BusinessException;
 import com.iag.bbscloud.common.exception.ExceptionEnum;
+import com.iag.bbscloud.common.exception.ParameterException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,6 +76,26 @@ public class ArticleServiceImpl implements ArticleService {
             );
         }else {
             throw new BusinessException("article add parameter error", ExceptionEnum.PARAMETER_ERROR);
+        }
+    }
+
+    @Override
+    public ArticleDTO querySingleArticle(BigInteger aid) throws ParameterException{
+        if(Objects.nonNull(aid) && StringUtils.isNotBlank(aid.toString())){
+            Article article = articleRepository.findOne(aid);
+            ArticleDetail articleDetail = articleDetailRepository.findOne(aid);
+
+            return ArticleDTO.build(
+                    aid,
+                    article.getUid(),
+                    article.getBid(),
+                    article.getTitle(),
+                    articleDetail.getContext(),
+                    article.getCreateTime(),
+                    article.getLastModifyTime()
+            );
+        }else {
+            throw new ParameterException("query article parameter error", ExceptionEnum.PARAMETER_ERROR);
         }
     }
 }
