@@ -11,7 +11,11 @@ public enum BizTagEnum {
     // 用户ID
     UID(0, "1001"),
     //article ID
-    AID(1, "1002")
+    AID(1, "1002"),
+    // reply
+    RID(2, "1003"),
+    // board
+    BID(3, "1004"),
     ;
     private int value;
     private String name;
@@ -24,6 +28,8 @@ public enum BizTagEnum {
         switch (index){
             case 0 : return UID;
             case 1 : return AID;
+            case 2 : return RID;
+            case 3 : return BID;
             default: return null;
         }
     }

@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigInteger;
 
 /**
  * @Author xueshan.wei@mljr.com
@@ -15,7 +16,7 @@ import javax.persistence.Id;
 public class AccountDetail {
     @Id
     @Column(nullable = false, unique = true)
-    private Long                            uid;
+    private BigInteger uid;
     @Column
     private String                          info;
 }

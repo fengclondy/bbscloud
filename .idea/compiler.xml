@@ -9,10 +9,12 @@
         <module name="account" />
         <module name="article" />
         <module name="bank" />
+        <module name="board" />
         <module name="common" />
         <module name="config-server" />
         <module name="eureka-server" />
         <module name="eurekaserver" />
+        <module name="getway" />
         <module name="honor" />
         <module name="idcenter" />
         <module name="reply" />
@@ -24,10 +26,12 @@
       <module name="article" target="1.8" />
       <module name="bank" target="1.8" />
       <module name="bbscloud" target="1.8" />
+      <module name="board" target="1.8" />
       <module name="common" target="1.5" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="eurekaserver" target="1.5" />
+      <module name="getway" target="1.8" />
       <module name="honor" target="1.8" />
       <module name="idcenter" target="1.8" />
       <module name="reply" target="1.8" />
