@@ -1,0 +1,26 @@
+package com.iag.bbscloud.common.enums;
+
+import lombok.Getter;
+
+/**
+ * @Author xueshan.wei@mljr.com
+ * @Date 2017/10/2 下午1:56
+ * 交易类型
+ */
+@Getter
+public enum TradeTypeEnum {
+    // 转账
+    TRANSFER("zhuanzhang", 1),
+    // 消费
+    EXPENSE("xiaofei", 2),
+    // 系统奖励
+    SYSTEM_AWARD("xitongjiangli", 3);
+    ;
+    private String                  name;
+    private Integer                 value;
+
+    TradeTypeEnum(String name, Integer value) {
+        this.name = name;
+        this.value = value;
+    }
+}

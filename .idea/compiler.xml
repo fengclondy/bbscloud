@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="account" />
         <module name="article" />
+        <module name="auth" />
         <module name="bank" />
         <module name="board" />
         <module name="common" />
@@ -24,6 +25,7 @@
     <bytecodeTargetLevel>
       <module name="account" target="1.8" />
       <module name="article" target="1.8" />
+      <module name="auth" target="1.8" />
       <module name="bank" target="1.8" />
       <module name="bbscloud" target="1.8" />
       <module name="board" target="1.8" />

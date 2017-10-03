@@ -16,6 +16,10 @@ public enum BizTagEnum {
     RID(2, "1003"),
     // board
     BID(3, "1004"),
+    // bank account id
+    BRID(4, "5001"),
+    // trade record id
+    TRADE_RECORD_ID(5, "5002"),
     ;
     private int value;
     private String name;

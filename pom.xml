@@ -20,6 +20,7 @@
         <module>idcenter</module>
         <module>getway</module>
         <module>board</module>
+        <module>auth</module>
     </modules>
 
     <packaging>pom</packaging>
