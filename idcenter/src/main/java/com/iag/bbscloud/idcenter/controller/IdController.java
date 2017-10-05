@@ -19,8 +19,8 @@ public class IdController {
     private IdGenerateService idGenerateService;
 
     @GetMapping("id")
-    public String generateId(@RequestParam Integer bizTag) throws Exception {
-        String id = idGenerateService.generateId(BizTagEnum.index(bizTag));
+    public Long generateId(@RequestParam Integer bizTag) throws Exception {
+        Long id = idGenerateService.generateId(BizTagEnum.index(bizTag));
 
         return id;
     }

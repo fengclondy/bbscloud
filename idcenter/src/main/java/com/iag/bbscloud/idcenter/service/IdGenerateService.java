@@ -12,5 +12,5 @@ public interface IdGenerateService {
      * @param bizTagEnum
      * @return
      */
-    String generateId(BizTagEnum bizTagEnum) throws Exception;
+    Long generateId(BizTagEnum bizTagEnum) throws Exception;
 }
