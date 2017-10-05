@@ -25,6 +25,10 @@ public enum ExceptionEnum {
     BOARD_NOST_EXIST("32000001", "board not exist"),
     BOARD_ADD_ERROR("32010001", "board add error"),
 
+    //bank
+    BANK_ACCOUNT_NOTEXIST("40000001", "bank account not exist"),
+    BANK_ACCOUNT_ALREADY_EXIST("40000002", "bank account already exist"),
+
     // business
     PARAMETER_ERROR("80000001", "parameter has error"),
     ;

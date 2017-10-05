@@ -17,7 +17,7 @@ public enum BizTagEnum {
     // board
     BID(3, "1004"),
     // bank account id
-    BRID(4, "5001"),
+    BAID(4, "5001"),
     // trade record id
     TRADE_RECORD_ID(5, "5002"),
     ;
@@ -34,6 +34,8 @@ public enum BizTagEnum {
             case 1 : return AID;
             case 2 : return RID;
             case 3 : return BID;
+            case 4 : return BAID;
+            case 5 : return TRADE_RECORD_ID;
             default: return null;
         }
     }

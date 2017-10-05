@@ -1,5 +1,6 @@
 package com.iag.bbscloud.bank.model;
 
+import com.iag.bbscloud.common.date.DateUtils;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,9 +25,9 @@ public class TradeRecord {
     @Id
     @Column(nullable = false, unique = true)
     private BigInteger                  trid;
-    // 交易人
+    // 交易账户
     @Column
-    private BigInteger                  trader;
+    private BigInteger                  baid;
     // 交易额
     @Column
     private BigDecimal                  turnover;
@@ -40,4 +41,15 @@ public class TradeRecord {
     private Date                        tradeTime;
     @Column
     private Date                        lastModifyTime;
+
+    public TradeRecord(BigInteger trid, BigInteger baid, BigDecimal turnover, Integer type, String detail) {
+        this.trid = trid;
+        this.baid = baid;
+        this.turnover = turnover;
+        this.type = type;
+        this.detail = detail;
+        Date now = DateUtils.getNow();
+        this.tradeTime = now;
+        this.lastModifyTime = now;
+    }
 }

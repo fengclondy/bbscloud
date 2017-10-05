@@ -9,6 +9,8 @@ import lombok.Getter;
  */
 @Getter
 public enum TradeTypeEnum {
+    // 创建账户
+    CREATE("chuangjian", 0),
     // 转账
     TRANSFER("zhuanzhang", 1),
     // 消费
@@ -22,5 +24,15 @@ public enum TradeTypeEnum {
     TradeTypeEnum(String name, Integer value) {
         this.name = name;
         this.value = value;
+    }
+
+    public static TradeTypeEnum index(int value){
+        switch (value){
+            case 0 : return CREATE;
+            case 1 : return TRANSFER;
+            case 2 : return EXPENSE;
+            case 3 : return SYSTEM_AWARD;
+            default: return null;
+        }
     }
 }
