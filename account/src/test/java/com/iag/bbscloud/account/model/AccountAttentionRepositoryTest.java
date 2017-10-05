@@ -18,8 +18,8 @@ public class AccountAttentionRepositoryTest extends AccountApplicationTest {
 
     @Test
     public void testCountAllByAttentionUid(){
-        BigInteger uid = new BigInteger("100110020000000007", 10);
-        BigInteger notExistUid = new BigInteger("900110020000000007", 10);
+        Long uid = 34695595229184L;
+        Long notExistUid = 147653333L;
         int num = accountAttentionRepository.countAllByAttentionUid(uid);
         int num2 = accountAttentionRepository.countAllByAttentionUid(notExistUid);
         int num3 = accountAttentionRepository.countAllByAttentionUid(null);
@@ -30,8 +30,8 @@ public class AccountAttentionRepositoryTest extends AccountApplicationTest {
 
     @Test
     public void testCountAllByAttentionedUid(){
-        BigInteger uid = new BigInteger("100110020000000007", 10);
-        BigInteger notExistUid = new BigInteger("900110020000000007", 10);
+        Long uid = 147653333L;
+        Long notExistUid = 147653333L;
         int num = accountAttentionRepository.countAllByAttentionedUid(uid);
         int num2 = accountAttentionRepository.countAllByAttentionedUid(notExistUid);
         System.out.println(num);

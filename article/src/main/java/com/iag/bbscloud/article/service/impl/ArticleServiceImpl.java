@@ -43,8 +43,7 @@ public class ArticleServiceImpl implements ArticleService {
                 && StringUtils.isNotBlank(articleAddDTO.getContext())){
             //1.generate id
             String idUrl = "http://IDCENTER-SERVER/id?bizTag=" + BizTagEnum.AID.getValue();
-            String aid_s = restTemplate.getForObject(idUrl, String.class);
-            BigInteger aid = new BigInteger(aid_s, 10);
+            Long aid = restTemplate.getForObject(idUrl, Long.class);
             //2.save article
             Article newArticle = new Article(
                     aid,
@@ -80,7 +79,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public ArticleDTO querySingleArticle(BigInteger aid) throws ParameterException{
+    public ArticleDTO querySingleArticle(Long aid) throws ParameterException{
         if(Objects.nonNull(aid) && StringUtils.isNotBlank(aid.toString())){
             Article article = articleRepository.findOne(aid);
             ArticleDetail articleDetail = articleDetailRepository.findOne(aid);

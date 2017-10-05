@@ -32,7 +32,7 @@ public class AccountController {
     }
 
     @GetMapping("/account/{uid}")
-    public ResponseDTO<AccountDTO> queryAccountById(@PathVariable BigInteger uid) throws ParameterException{
+    public ResponseDTO<AccountDTO> queryAccountById(@PathVariable Long uid) throws ParameterException{
         if(Objects.nonNull(uid) && StringUtils.isNotBlank(uid.toString())){
             return ResponseDTO.buildSuccess("查询账户成功", accountService.queryAccountById(uid));
         }else {

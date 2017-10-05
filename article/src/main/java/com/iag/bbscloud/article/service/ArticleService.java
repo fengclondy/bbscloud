@@ -15,6 +15,6 @@ public interface ArticleService {
 
     ArticleDTO addArticle(ArticleAddDTO articleAddDTO) throws BusinessException;
 
-    ArticleDTO querySingleArticle(BigInteger aid) throws ParameterException;
+    ArticleDTO querySingleArticle(Long aid) throws ParameterException;
 
 }

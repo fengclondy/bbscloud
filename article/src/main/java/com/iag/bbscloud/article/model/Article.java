@@ -22,12 +22,12 @@ import java.util.Date;
 public class Article {
     @Id
     @Column(nullable = false, unique = true)
-    private BigInteger                      aid;
+    private Long                            aid;
     @Column
-    private BigInteger                      uid;
+    private Long                            uid;
     // 板块ID
     @Column
-    private BigInteger                      bid;
+    private Long                            bid;
     @Column
     private String                          title;
     @Column
@@ -35,7 +35,7 @@ public class Article {
     @Column
     private Date                            lastModifyTime;
 
-    public Article(BigInteger aid, BigInteger uid, BigInteger bid, String title) {
+    public Article(Long aid, Long uid,  Long bid, String title) {
         this.aid = aid;
         this.uid = uid;
         this.bid = bid;

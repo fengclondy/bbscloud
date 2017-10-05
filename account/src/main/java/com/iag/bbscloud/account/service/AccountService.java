@@ -22,7 +22,7 @@ public interface AccountService {
      * 删除账户
      * @param uid
      */
-    void deleteAccount(String uid) throws BusinessException;
+    void deleteAccount(Long uid) throws BusinessException;
 
-    AccountDTO queryAccountById(BigInteger uid);
+    AccountDTO queryAccountById(Long uid);
 }

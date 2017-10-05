@@ -13,15 +13,15 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 public class ArticleDTO {
-    private BigInteger              aid;
-    private BigInteger              uid;
-    private BigInteger              bid;
+    private Long                    aid;
+    private Long                    uid;
+    private Long                    bid;
     private String                  title;
     private String                  context;
     private Date                    createTime;
     private Date                    lastModifyTime;
 
-    public static ArticleDTO build(BigInteger aid, BigInteger uid, BigInteger bid, String title, String context, Date createTime, Date lastModifyTime){
+    public static ArticleDTO build(Long aid, Long uid, Long bid, String title, String context, Date createTime, Date lastModifyTime){
         return new ArticleDTO(aid, uid, bid, title, context, createTime, lastModifyTime);
     }
 }

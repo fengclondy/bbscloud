@@ -40,21 +40,21 @@ public class AccountServiceImpl implements AccountService {
             throw new BusinessException("账户已经存在", ExceptionEnum.ACCOUNT_ALREADY_EXIST);
         }
         // 2.generate uid
-        String uid = idGenerateService.generateId();
+        Long uid = idGenerateService.generateId();
 
         // 3.add account
-        Account newAccount = new Account(new BigInteger(uid, 10),
+        Account newAccount = new Account(uid,
                 accountAddDTO.getName(),
                 accountAddDTO.getPassword());
 
         newAccount = accountRepository.save(newAccount);
         log.info("[add account success] add account id:{} is success", newAccount.getUid());
-        return AccountDTO.build(newAccount.getUid().toString(), newAccount.getName());
+        return AccountDTO.build(newAccount.getUid(), newAccount.getName());
     }
 
     @Override
-    public void deleteAccount(String uid)  throws BusinessException{
-        Account existAccount = accountRepository.findOne(new BigInteger(uid, 10));
+    public void deleteAccount(Long uid)  throws BusinessException{
+        Account existAccount = accountRepository.findOne(uid);
 
         if(existAccount == null || existAccount.getAccountDelete().intValue() == TrueOrFalseEnum.TRUE.getIntValue()){
             log.error("[删除账户失败] id 为 {} 的账户不存在或者已经被删除", uid);
@@ -65,10 +65,10 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public AccountDTO queryAccountById(BigInteger uid){
+    public AccountDTO queryAccountById(Long uid){
         Account existAccount = accountRepository.findOne(uid);
 
-        return AccountDTO.build(existAccount.getUid().toString(),
+        return AccountDTO.build(existAccount.getUid(),
                 existAccount.getName());
     }
 }

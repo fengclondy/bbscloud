@@ -17,7 +17,7 @@ public class AccountServiceTest extends AccountApplicationTest {
 
     @Test
     public void testAddAccount() throws BusinessException {
-        AccountAddDTO accountAddDTO = new AccountAddDTO("testaccount", "123456");
+        AccountAddDTO accountAddDTO = new AccountAddDTO("testaccount2", "123456");
         AccountDTO accountDTO = accountService.addAccount(accountAddDTO);
         System.out.println(accountDTO);
     }

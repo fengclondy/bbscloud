@@ -10,10 +10,10 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class AccountDTO {
-    private String                      uid;
+    private Long                        uid;
     private String                      name;
 
-    public static AccountDTO build(String uid, String name){
+    public static AccountDTO build(Long uid, String name){
         return new AccountDTO(uid, name);
     }
 }

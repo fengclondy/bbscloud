@@ -14,6 +14,6 @@ import java.math.BigInteger;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AccountAttentionDTO {
-    private BigInteger              attentionUid;
-    private BigInteger              attentionedUid;
+    private Long              attentionUid;
+    private Long              attentionedUid;
 }

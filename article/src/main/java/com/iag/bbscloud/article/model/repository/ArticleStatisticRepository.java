@@ -9,5 +9,5 @@ import java.math.BigInteger;
  * @Author xueshan.wei@mljr.com
  * @Date 2017/9/26 下午3:39
  */
-public interface ArticleStatisticRepository extends CrudRepository<ArticleStatistic, BigInteger> {
+public interface ArticleStatisticRepository extends CrudRepository<ArticleStatistic, Long> {
 }

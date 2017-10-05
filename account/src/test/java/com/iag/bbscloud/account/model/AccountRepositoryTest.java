@@ -19,7 +19,7 @@ public class AccountRepositoryTest extends AccountApplicationTest {
 
     @Test
     public void testUpdateAccountDelete(){
-        BigInteger uid = new BigInteger("100110020000000007", 10);
+        Long uid = 17520071479323L;
         accountRepository.updateAccountDelete(TrueOrFalseEnum.TRUE.getIntValue(), uid);
     }
 }

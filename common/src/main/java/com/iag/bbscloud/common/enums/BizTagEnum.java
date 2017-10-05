@@ -9,17 +9,17 @@ import lombok.Getter;
 @Getter
 public enum BizTagEnum {
     // 用户ID
-    UID(0, "1001"),
+    UID(0, "10000"),
     //article ID
-    AID(1, "1002"),
+    AID(1, "10001"),
     // reply
-    RID(2, "1003"),
+    RID(2, "10010"),
     // board
-    BID(3, "1004"),
+    BID(3, "10011"),
     // bank account id
-    BAID(4, "5001"),
+    BAID(4, "10100"),
     // trade record id
-    TRADE_RECORD_ID(5, "5002"),
+    TRADE_RECORD_ID(5, "10101"),
     ;
     private int value;
     private String name;

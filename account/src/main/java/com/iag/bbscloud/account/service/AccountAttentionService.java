@@ -15,7 +15,7 @@ public interface AccountAttentionService {
      * @param attentionedUid 被关注人ID
      * @throws BusinessException
      */
-    void attention(BigInteger attentionUid, BigInteger attentionedUid);
+    void attention(Long attentionUid, Long attentionedUid);
 
     /**
      * 取消关注某人
@@ -23,19 +23,19 @@ public interface AccountAttentionService {
      * @param attentionedUid 被关注人ID
      * @throws BusinessException
      */
-    void cancelAttention(BigInteger attentionUid, BigInteger attentionedUid) throws BusinessException;
+    void cancelAttention(Long attentionUid, Long attentionedUid) throws BusinessException;
 
     /**
      * 统计某人关注的人数
      * @param uid
      * @return
      */
-    int countAttentionNum(BigInteger uid);
+    int countAttentionNum(Long uid);
 
     /**
      * 统计某人被关注的次数
      * @param uid
      * @return
      */
-    int countAttentionedNum(BigInteger uid);
+    int countAttentionedNum(Long uid);
 }

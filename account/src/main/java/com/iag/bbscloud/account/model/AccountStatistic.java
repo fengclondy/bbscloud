@@ -19,5 +19,5 @@ import java.math.BigInteger;
 public class AccountStatistic {
     @Id
     @Column(nullable = false, unique = true)
-    private BigInteger                          uid;
+    private Long                            uid;
 }

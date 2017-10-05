@@ -12,8 +12,8 @@ import java.math.BigInteger;
 @AllArgsConstructor
 @Data
 public class ArticleAddDTO {
-    private BigInteger                  uid;
-    private BigInteger                  bid;
+    private Long                        uid;
+    private Long                        bid;
     private String                      title;
     private String                      context;
 }

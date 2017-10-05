@@ -26,7 +26,7 @@ public class Account {
     @GeneratedValue(generator = "ass")
     @GenericGenerator(name = "ass", strategy = "assigned")
     @Column(nullable = false, unique = true)
-    private BigInteger                          uid;
+    private Long                                uid;
     @Column(nullable = false)
     private String                              name;
     @Column
@@ -40,7 +40,7 @@ public class Account {
     @Column
     private Date                                lastModifyTime;
 
-    public Account(BigInteger uid, String name, String password) {
+    public Account(Long uid, String name, String password) {
         this.uid = uid;
         this.name = name;
         this.password = password;

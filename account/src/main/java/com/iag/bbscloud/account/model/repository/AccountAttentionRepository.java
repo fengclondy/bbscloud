@@ -11,9 +11,9 @@ import java.math.BigInteger;
  */
 public interface AccountAttentionRepository extends CrudRepository<AccountAttention, Long> {
 
-    int countAllByAttentionUid(BigInteger attentionUid);
+    int countAllByAttentionUid(Long attentionUid);
 
-    int countAllByAttentionedUid(BigInteger attentionedUid);
+    int countAllByAttentionedUid(Long attentionedUid);
 
-    AccountAttention queryFirstByAttentionUidAndAttentionedUid(BigInteger attentionUid, BigInteger attentionedId);
+    AccountAttention queryFirstByAttentionUidAndAttentionedUid(Long attentionUid, Long attentionedId);
 }

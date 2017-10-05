@@ -24,15 +24,15 @@ public class AccountAttention {
     private Long                            aaid;
     // 关注人ID
     @Column
-    private BigInteger                      attentionUid;
+    private Long                      attentionUid;
     // 被关注人ID
     @Column
-    private BigInteger                      attentionedUid;
+    private Long                      attentionedUid;
     //关注时候的时间
     @Column
     private Date                            attentionTime;
 
-    public AccountAttention(BigInteger attentionUid, BigInteger attentionedUid, Date attentionTime) {
+    public AccountAttention(Long attentionUid, Long attentionedUid, Date attentionTime) {
         this.attentionUid = attentionUid;
         this.attentionedUid = attentionedUid;
         this.attentionTime = attentionTime;

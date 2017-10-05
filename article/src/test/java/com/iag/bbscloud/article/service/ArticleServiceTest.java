@@ -20,8 +20,8 @@ public class ArticleServiceTest extends ArticleApplicationTest {
     @Test
     public void testAddArticle() throws BusinessException {
         ArticleAddDTO articleAddDTO = new ArticleAddDTO(
-                new BigInteger("100110020000000009", 10),
-                new BigInteger("100110040000000017", 10),
+                123L,
+                456L,
                 "title",
                 "context..."
         );

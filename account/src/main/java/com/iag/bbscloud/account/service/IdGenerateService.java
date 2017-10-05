@@ -22,8 +22,8 @@ public class IdGenerateService {
         return new RestTemplate();
     }
 
-    public String generateId(){
+    public Long generateId(){
         String idUrl = "http://IDCENTER-SERVER/id?bizTag=" + BizTagEnum.UID.getValue();
-        return restTemplate.getForObject(idUrl, String.class);
+        return restTemplate.getForObject(idUrl, Long.class);
     }
 }

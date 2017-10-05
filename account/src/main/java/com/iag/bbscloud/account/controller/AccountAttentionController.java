@@ -38,9 +38,7 @@ public class AccountAttentionController {
         // 校验参数
         if(Objects.nonNull(accountAttentionDTO)
                 && Objects.nonNull(accountAttentionDTO.getAttentionUid())
-                && Objects.nonNull(accountAttentionDTO.getAttentionedUid())
-                && StringUtils.isNotBlank(accountAttentionDTO.getAttentionUid().toString())
-                && StringUtils.isNotBlank(accountAttentionDTO.getAttentionedUid().toString())){
+                && Objects.nonNull(accountAttentionDTO.getAttentionedUid())){
             accountAttentionService.attention(accountAttentionDTO.getAttentionUid(),
                     accountAttentionDTO.getAttentionedUid());
             return ResponseDTO.buildSuccess("关注成功");
@@ -60,9 +58,7 @@ public class AccountAttentionController {
         // 校验参数
         if(Objects.nonNull(accountAttentionDTO)
                 && Objects.nonNull(accountAttentionDTO.getAttentionUid())
-                && Objects.nonNull(accountAttentionDTO.getAttentionedUid())
-                && StringUtils.isNotBlank(accountAttentionDTO.getAttentionUid().toString())
-                && StringUtils.isNotBlank(accountAttentionDTO.getAttentionedUid().toString())){
+                && Objects.nonNull(accountAttentionDTO.getAttentionedUid())){
             accountAttentionService.cancelAttention(accountAttentionDTO.getAttentionUid(),
                     accountAttentionDTO.getAttentionedUid());
             return ResponseDTO.buildSuccess("关注成功");

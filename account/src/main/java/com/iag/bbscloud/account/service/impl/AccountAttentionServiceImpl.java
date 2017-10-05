@@ -21,14 +21,14 @@ public class AccountAttentionServiceImpl implements AccountAttentionService {
     private AccountAttentionRepository accountAttentionRepository;
 
     @Override
-    public void attention(BigInteger attentionUid, BigInteger attentionedUid){
+    public void attention(Long attentionUid, Long attentionedUid){
         Date now = DateUtils.getNow();
         AccountAttention accountAttention = new AccountAttention(attentionUid, attentionedUid, now);
         accountAttentionRepository.save(accountAttention);
     }
 
     @Override
-    public void cancelAttention(BigInteger attentionUid, BigInteger attentionedUid) throws BusinessException {
+    public void cancelAttention(Long attentionUid, Long attentionedUid) throws BusinessException {
         AccountAttention exist = accountAttentionRepository.queryFirstByAttentionUidAndAttentionedUid(attentionUid, attentionedUid);
         if(exist != null){
             accountAttentionRepository.delete(exist);
@@ -36,12 +36,12 @@ public class AccountAttentionServiceImpl implements AccountAttentionService {
     }
 
     @Override
-    public int countAttentionNum(BigInteger uid) {
+    public int countAttentionNum(Long uid) {
         return accountAttentionRepository.countAllByAttentionUid(uid);
     }
 
     @Override
-    public int countAttentionedNum(BigInteger uid) {
+    public int countAttentionedNum(Long uid) {
         return accountAttentionRepository.countAllByAttentionedUid(uid);
     }
 }

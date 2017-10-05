@@ -21,12 +21,12 @@ import java.util.Date;
 public class ArticleDetail {
     @Id
     @Column(nullable = false, unique = true)
-    private BigInteger                      aid;
+    private Long                            aid;
     @Column
-    private BigInteger                      uid;
+    private Long                            uid;
     // 板块ID
     @Column
-    private BigInteger                      bid;
+    private Long                            bid;
     @Column
     private String                          context;
     @Column

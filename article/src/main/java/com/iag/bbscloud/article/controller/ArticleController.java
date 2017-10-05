@@ -3,6 +3,7 @@ package com.iag.bbscloud.article.controller;
 import com.iag.bbscloud.article.service.ArticleService;
 import com.iag.bbscloud.common.dto.ArticleAddDTO;
 import com.iag.bbscloud.common.dto.ArticleDTO;
+import com.iag.bbscloud.common.dto.ResponseDTO;
 import com.iag.bbscloud.common.exception.BusinessException;
 import com.iag.bbscloud.common.exception.ParameterException;
 import lombok.extern.slf4j.Slf4j;
@@ -23,17 +24,19 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("/article/{aid}")
-    public ArticleDTO querySingleArticle(@PathVariable BigInteger aid) throws ParameterException{
-        return articleService.querySingleArticle(aid);
+    public ResponseDTO querySingleArticle(@PathVariable Long aid) throws ParameterException{
+        ArticleDTO articleDTO = articleService.querySingleArticle(aid);
+        return ResponseDTO.buildSuccess("查询成功", articleDTO);
     }
 
     @PostMapping("/article")
-    public ArticleDTO addArticle(@RequestBody ArticleAddDTO articleAddDTO) throws BusinessException {
-        return articleService.addArticle(articleAddDTO);
+    public ResponseDTO addArticle(@RequestBody ArticleAddDTO articleAddDTO) throws BusinessException {
+        ArticleDTO articleDTO = articleService.addArticle(articleAddDTO);
+        return ResponseDTO.buildSuccess("添加文章成功", articleDTO);
     }
     
     @DeleteMapping("/article/{aid}")
-    public void deleteArticle(@PathVariable BigInteger aid){
+    public void deleteArticle(@PathVariable Long aid){
         // TODO: 2017/9/28
     }
 }

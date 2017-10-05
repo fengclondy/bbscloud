@@ -16,7 +16,7 @@ import java.math.BigInteger;
 public class AccountDetail {
     @Id
     @Column(nullable = false, unique = true)
-    private BigInteger uid;
+    private Long uid;
     @Column
     private String                          info;
 }
